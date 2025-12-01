@@ -2,8 +2,7 @@
 CD /d %~dp0
 
 echo.
-echo Microsoft Visual C++ All-In-One Runtimes by W1zzard @ TechPowerUp
-echo https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/
+echo Microsoft Visual C++ All-In-One Runtimes Developed by **GDJ2001**
 echo.
 echo Installing runtime packages...
 
