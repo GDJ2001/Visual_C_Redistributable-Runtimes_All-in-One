@@ -1,6 +1,6 @@
 # Visual C++ Redistributable Runtimes — All-in-One Installer
 
-This repository contains a batch installer that runs Microsoft Visual C++ Redistributable packages (x86 and x64) silently or passively. It is intended to be run from a local folder that contains the redistributable EXE files.
+This repository contains a batch installer that runs Microsoft Visual C++ Redistributable packages (x86 and x64) passively. It is intended to be run from a local folder that contains the redistributable EXE files.
 
 Author GitHub account
 - GitHub username embedded in the installer: GDJ2001
