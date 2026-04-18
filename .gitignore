@@ -1,0 +1,28 @@
+# Runtime logs created by the installer during local testing.
+logs/
+*.log
+
+# Temporary folders and partial downloads.
+tmp/
+temp/
+.cache/
+*.tmp
+*.temp
+*.download
+*.partial
+*.crdownload
+*.sha256.tmp
+
+# Local backup/merge leftovers.
+*.bak
+*.old
+*.orig
+*.rej
+
+# OS and editor metadata.
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.vscode/

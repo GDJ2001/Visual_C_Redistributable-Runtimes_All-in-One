@@ -1,2 +1,27 @@
-# Auto detect text files and perform LF normalization
+# Normalize text files while preserving executable payloads.
 * text=auto
+.gitattributes text eol=lf
+.gitignore text eol=lf
+
+# Windows entry points must keep CRLF for cmd.exe.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# PowerShell scripts are run on Windows in this project.
+*.ps1 text eol=crlf
+*.psm1 text eol=crlf
+*.psd1 text eol=crlf
+
+# Repository metadata and documentation.
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+
+# Bundled installer artifacts are binary.
+*.exe binary
+*.msi binary
+*.cab binary
+*.dll binary
+*.zip binary

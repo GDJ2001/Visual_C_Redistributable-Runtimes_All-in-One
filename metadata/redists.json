@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "project": "Visual C++ Redistributable Runtimes All-in-One",
+  "toolsetCompatibility": [
+    {
+      "id": "vs2017-v141-final",
+      "displayName": "Visual Studio 2017 / v141 final",
+      "visualStudioVersion": "2017",
+      "servicingBaseline": "15.9",
+      "platformToolset": "v141",
+      "runtimeFamily": "vc14",
+      "installerSet": "modern",
+      "aliases": [
+        "2017",
+        "vs2017",
+        "v141",
+        "vc141",
+        "v141-final"
+      ],
+      "supportStatus": "extended-support",
+      "supportUntil": "2027-04-13",
+      "notes": "Compatibility target only. Microsoft Visual Studio 2017 and later share the VC14 redistributable files, so this installs the current bundled VC14 x86/x64/ARM64 packages selected for the current architecture."
+    },
+    {
+      "id": "vs2019-v142-final",
+      "displayName": "Visual Studio 2019 / v142 final",
+      "visualStudioVersion": "2019",
+      "servicingBaseline": "16.11",
+      "platformToolset": "v142",
+      "runtimeFamily": "vc14",
+      "installerSet": "modern",
+      "aliases": [
+        "2019",
+        "vs2019",
+        "v142",
+        "vc142",
+        "v142-final"
+      ],
+      "supportStatus": "extended-support",
+      "supportUntil": "2029-04-10",
+      "notes": "Compatibility target only. Microsoft Visual Studio 2017 and later share the VC14 redistributable files, so this installs the current bundled VC14 x86/x64/ARM64 packages selected for the current architecture."
+    },
+    {
+      "id": "vs2022-v143-final",
+      "displayName": "Visual Studio 2022 / v143 final",
+      "visualStudioVersion": "2022",
+      "servicingBaseline": "17.14",
+      "platformToolset": "v143",
+      "runtimeFamily": "vc14",
+      "installerSet": "modern",
+      "aliases": [
+        "2022",
+        "vs2022",
+        "v143",
+        "vc143",
+        "v143-final"
+      ],
+      "supportStatus": "mainstream-support",
+      "supportUntil": "2032-01-13",
+      "notes": "Compatibility target only. Microsoft Visual Studio 2017 and later share the VC14 redistributable files, so this installs the current bundled VC14 x86/x64/ARM64 packages selected for the current architecture."
+    }
+  ],
+  "packages": [
+    {
+      "id": "vc2005-x86",
+      "family": "2005",
+      "displayName": "Microsoft Visual C++ 2005 Redistributable x86",
+      "architecture": "x86",
+      "path": "redists/2005/vcredist_x86.exe",
+      "downloadUrl": null,
+      "installArgs": {
+        "passive": "/q",
+        "silent": "/q",
+        "noRestart": ""
+      },
+      "set": "legacy",
+      "supportStatus": "legacy-bundled",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2005-x64",
+      "family": "2005",
+      "displayName": "Microsoft Visual C++ 2005 Redistributable x64",
+      "architecture": "x64",
+      "path": "redists/2005/vcredist_x64.exe",
+      "downloadUrl": null,
+      "installArgs": {
+        "passive": "/q",
+        "silent": "/q",
+        "noRestart": ""
+      },
+      "set": "legacy",
+      "supportStatus": "legacy-bundled",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2008-x86",
+      "family": "2008",
+      "displayName": "Microsoft Visual C++ 2008 Redistributable x86",
+      "architecture": "x86",
+      "path": "redists/2008/vcredist_x86.exe",
+      "downloadUrl": null,
+      "installArgs": {
+        "passive": "/qb",
+        "silent": "/q",
+        "noRestart": ""
+      },
+      "set": "legacy",
+      "supportStatus": "legacy-bundled",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2008-x64",
+      "family": "2008",
+      "displayName": "Microsoft Visual C++ 2008 Redistributable x64",
+      "architecture": "x64",
+      "path": "redists/2008/vcredist_x64.exe",
+      "downloadUrl": null,
+      "installArgs": {
+        "passive": "/qb",
+        "silent": "/q",
+        "noRestart": ""
+      },
+      "set": "legacy",
+      "supportStatus": "legacy-bundled",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2010-x86",
+      "family": "2010",
+      "displayName": "Microsoft Visual C++ 2010 Redistributable x86",
+      "architecture": "x86",
+      "path": "redists/2010/vcredist_x86.exe",
+      "downloadUrl": null,
+      "installArgs": {
+        "passive": "/passive /norestart",
+        "silent": "/q /norestart",
+        "noRestart": "/norestart"
+      },
+      "set": "legacy",
+      "supportStatus": "legacy-bundled",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2010-x64",
+      "family": "2010",
+      "displayName": "Microsoft Visual C++ 2010 Redistributable x64",
+      "architecture": "x64",
+      "path": "redists/2010/vcredist_x64.exe",
+      "downloadUrl": null,
+      "installArgs": {
+        "passive": "/passive /norestart",
+        "silent": "/q /norestart",
+        "noRestart": "/norestart"
+      },
+      "set": "legacy",
+      "supportStatus": "legacy-bundled",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2012-x86",
+      "family": "2012",
+      "displayName": "Microsoft Visual C++ 2012 Redistributable x86",
+      "architecture": "x86",
+      "path": "redists/2012/vcredist_x86.exe",
+      "downloadUrl": null,
+      "installArgs": {
+        "install": "/install",
+        "repair": "/repair",
+        "passive": "/passive",
+        "silent": "/quiet",
+        "noRestart": "/norestart"
+      },
+      "set": "legacy",
+      "supportStatus": "legacy-bundled",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2012-x64",
+      "family": "2012",
+      "displayName": "Microsoft Visual C++ 2012 Redistributable x64",
+      "architecture": "x64",
+      "path": "redists/2012/vcredist_x64.exe",
+      "downloadUrl": null,
+      "installArgs": {
+        "install": "/install",
+        "repair": "/repair",
+        "passive": "/passive",
+        "silent": "/quiet",
+        "noRestart": "/norestart"
+      },
+      "set": "legacy",
+      "supportStatus": "legacy-bundled",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2013-x86",
+      "family": "2013",
+      "displayName": "Microsoft Visual C++ 2013 Redistributable x86",
+      "architecture": "x86",
+      "path": "redists/2013/vcredist_x86.exe",
+      "downloadUrl": null,
+      "installArgs": {
+        "install": "/install",
+        "repair": "/repair",
+        "passive": "/passive",
+        "silent": "/quiet",
+        "noRestart": "/norestart"
+      },
+      "set": "legacy",
+      "supportStatus": "legacy-bundled",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2013-x64",
+      "family": "2013",
+      "displayName": "Microsoft Visual C++ 2013 Redistributable x64",
+      "architecture": "x64",
+      "path": "redists/2013/vcredist_x64.exe",
+      "downloadUrl": null,
+      "installArgs": {
+        "install": "/install",
+        "repair": "/repair",
+        "passive": "/passive",
+        "silent": "/quiet",
+        "noRestart": "/norestart"
+      },
+      "set": "legacy",
+      "supportStatus": "legacy-bundled",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc14-x86",
+      "family": "vc14",
+      "displayName": "Microsoft Visual C++ 2015-2026 Redistributable x86",
+      "architecture": "x86",
+      "path": "redists/vc14/vc_redist.x86.exe",
+      "downloadUrl": "https://aka.ms/vc14/vc_redist.x86.exe",
+      "installArgs": {
+        "install": "/install",
+        "repair": "/repair",
+        "passive": "/passive",
+        "silent": "/quiet",
+        "noRestart": "/norestart"
+      },
+      "set": "modern",
+      "supportStatus": "actively-updated",
+      "updateEnabled": true
+    },
+    {
+      "id": "vc14-x64",
+      "family": "vc14",
+      "displayName": "Microsoft Visual C++ 2015-2026 Redistributable x64",
+      "architecture": "x64",
+      "path": "redists/vc14/vc_redist.x64.exe",
+      "downloadUrl": "https://aka.ms/vc14/vc_redist.x64.exe",
+      "installArgs": {
+        "install": "/install",
+        "repair": "/repair",
+        "passive": "/passive",
+        "silent": "/quiet",
+        "noRestart": "/norestart"
+      },
+      "set": "modern",
+      "supportStatus": "actively-updated",
+      "updateEnabled": true
+    },
+    {
+      "id": "vc14-arm64",
+      "family": "vc14",
+      "displayName": "Microsoft Visual C++ 2015-2026 Redistributable ARM64",
+      "architecture": "arm64",
+      "path": "redists/vc14/vc_redist.arm64.exe",
+      "downloadUrl": "https://aka.ms/vc14/vc_redist.arm64.exe",
+      "installArgs": {
+        "install": "/install",
+        "repair": "/repair",
+        "passive": "/passive",
+        "silent": "/quiet",
+        "noRestart": "/norestart"
+      },
+      "set": "modern",
+      "supportStatus": "actively-updated",
+      "updateEnabled": true
+    },
+    {
+      "id": "vc2002-mfc70-x86",
+      "family": "2002",
+      "displayName": "Microsoft Visual Studio .NET 2002 SP1 MFC70.DLL Security Update x86",
+      "architecture": "x86",
+      "path": "redists/2002/vs7.0sp1-kb924642-x86.exe",
+      "downloadUrl": "https://download.microsoft.com/download/6/b/e/6be11d8a-e0c7-429c-ac8c-9860e313ced9/VS7.0sp1-KB924642-X86.exe",
+      "installArgs": {
+        "passive": "/quiet /norestart",
+        "silent": "/quiet /norestart",
+        "noRestart": "/norestart"
+      },
+      "set": "discontinued",
+      "supportStatus": "discontinued-security-update",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2003-mfc-x86",
+      "family": "2003",
+      "displayName": "Microsoft Visual Studio .NET 2003 SP1 MFC Security Update x86",
+      "architecture": "x86",
+      "path": "redists/2003/vs7.1sp1-kb2465373-x86.exe",
+      "downloadUrl": "https://download.microsoft.com/download/9/7/C/97CABE46-5FB8-4240-A54E-4C83B99116D9/VS7.1sp1-KB2465373-X86.exe",
+      "installArgs": {
+        "passive": "/quiet /norestart",
+        "silent": "/quiet /norestart",
+        "noRestart": "/norestart"
+      },
+      "set": "discontinued",
+      "supportStatus": "discontinued-security-update",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2005-ia64",
+      "family": "2005",
+      "displayName": "Microsoft Visual C++ 2005 Redistributable IA64",
+      "architecture": "ia64",
+      "path": "redists/2005/vcredist_ia64.exe",
+      "downloadUrl": "https://download.microsoft.com/download/8/B/4/8B42259F-5D70-43F4-AC2E-4B208FD8D66A/vcredist_IA64.EXE",
+      "installArgs": {
+        "passive": "/q",
+        "silent": "/q",
+        "noRestart": ""
+      },
+      "set": "discontinued",
+      "supportStatus": "discontinued-architecture",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2008-ia64",
+      "family": "2008",
+      "displayName": "Microsoft Visual C++ 2008 Redistributable IA64",
+      "architecture": "ia64",
+      "path": "redists/2008/vcredist_ia64.exe",
+      "downloadUrl": "https://download.microsoft.com/download/5/D/8/5D8C65CB-C849-4025-8E95-C3966CAFD8AE/vcredist_IA64.exe",
+      "installArgs": {
+        "passive": "/qb",
+        "silent": "/q",
+        "noRestart": ""
+      },
+      "set": "discontinued",
+      "supportStatus": "discontinued-architecture",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2010-ia64",
+      "family": "2010",
+      "displayName": "Microsoft Visual C++ 2010 Redistributable IA64",
+      "architecture": "ia64",
+      "path": "redists/2010/vcredist_ia64.exe",
+      "downloadUrl": "https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_ia64.exe",
+      "installArgs": {
+        "passive": "/passive /norestart",
+        "silent": "/q /norestart",
+        "noRestart": "/norestart"
+      },
+      "set": "discontinued",
+      "supportStatus": "discontinued-architecture",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2012-arm",
+      "family": "2012",
+      "displayName": "Microsoft Visual C++ 2012 Redistributable ARM",
+      "architecture": "arm",
+      "path": "redists/2012/vcredist_arm.exe",
+      "downloadUrl": "https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU4/vcredist_arm.exe",
+      "installArgs": {
+        "install": "/install",
+        "repair": "/repair",
+        "passive": "/passive",
+        "silent": "/quiet",
+        "noRestart": "/norestart"
+      },
+      "set": "discontinued",
+      "supportStatus": "discontinued-architecture",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2015-u3-x86",
+      "family": "2015",
+      "displayName": "Microsoft Visual C++ 2015 Redistributable Update 3 x86",
+      "architecture": "x86",
+      "path": "redists/2015/vc_redist.x86.exe",
+      "downloadUrl": "https://download.microsoft.com/download/6/D/F/6DF3FF94-F7F9-4F0B-838C-A328D1A7D0EE/vc_redist.x86.exe",
+      "installArgs": {
+        "install": "/install",
+        "repair": "/repair",
+        "passive": "/passive",
+        "silent": "/quiet",
+        "noRestart": "/norestart"
+      },
+      "set": "discontinued",
+      "supportStatus": "discontinued-frozen",
+      "updateEnabled": false
+    },
+    {
+      "id": "vc2015-u3-x64",
+      "family": "2015",
+      "displayName": "Microsoft Visual C++ 2015 Redistributable Update 3 x64",
+      "architecture": "x64",
+      "path": "redists/2015/vc_redist.x64.exe",
+      "downloadUrl": "https://download.microsoft.com/download/6/D/F/6DF3FF94-F7F9-4F0B-838C-A328D1A7D0EE/vc_redist.x64.exe",
+      "installArgs": {
+        "install": "/install",
+        "repair": "/repair",
+        "passive": "/passive",
+        "silent": "/quiet",
+        "noRestart": "/norestart"
+      },
+      "set": "discontinued",
+      "supportStatus": "discontinued-frozen",
+      "updateEnabled": false
+    }
+  ]
+}

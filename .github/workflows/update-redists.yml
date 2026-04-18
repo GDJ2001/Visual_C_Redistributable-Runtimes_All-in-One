@@ -1,0 +1,96 @@
+name: Update bundled redistributables
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+    inputs:
+      package_group:
+        description: Package group to check
+        type: choice
+        required: true
+        default: modern
+        options:
+          - modern
+          - all
+          - legacy
+          - discontinued
+          - everything
+      force:
+        description: Re-download packages and allow a reviewed downgrade if Microsoft changes the current channel
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: update-bundled-redistributables-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  update-redists:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 0
+
+      - name: Download and validate Microsoft packages
+        id: update
+        shell: pwsh
+        env:
+          PACKAGE_GROUP: ${{ github.event_name == 'workflow_dispatch' && inputs.package_group || 'modern' }}
+          FORCE_UPDATE: ${{ github.event_name == 'workflow_dispatch' && inputs.force || false }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $params = @{
+            PackageGroup = $env:PACKAGE_GROUP
+          }
+          if ($env:FORCE_UPDATE -eq 'true') {
+            $params.Force = $true
+          }
+          ./scripts/update-redists.ps1 @params
+
+      - name: Verify bundled package manifest
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          ./scripts/verify-bundle.ps1
+
+      - name: Open update pull request
+        if: steps.update.outputs.changed == 'true'
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BASE_BRANCH: ${{ github.event.repository.default_branch }}
+          REPORT_PATH: ${{ steps.update.outputs.report_path }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $branch = 'automation/update-vc-redists'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch --force-create $branch
+          git add redists metadata
+
+          if (-not (git status --short)) {
+            Write-Host 'No tracked file changes remain after update.'
+            exit 0
+          }
+
+          git commit -m 'Update bundled Visual C++ redistributables'
+          git push --force-with-lease origin "HEAD:$branch"
+
+          $existing = gh pr list --head $branch --json number --jq '.[0].number'
+          if ($existing) {
+            gh pr edit $existing --title 'Update bundled Visual C++ redistributables' --body-file $env:REPORT_PATH
+          } else {
+            gh pr create --title 'Update bundled Visual C++ redistributables' --body-file $env:REPORT_PATH --base $env:BASE_BRANCH --head $branch
+          }
